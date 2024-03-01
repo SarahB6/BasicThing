@@ -1,0 +1,42 @@
+public class Main
+{
+    public class BasicMathOperations {
+
+        // Method to calculate the sum of squares of an array of numbers
+        public static int sumOfSquares(int[] array) {
+            int sum = 0;
+            for (int num : array) {
+                sum += num * num;
+            }
+            return sum;
+        }
+    
+        // Method to perform a linear search in an array
+        public static int linearSearch(int[] array, int target) {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == target) {
+                    return i; // Return the index of the target element
+                }
+            }
+            return -1; // Return -1 if the target is not found
+        }
+    
+        // Main method to test the functionality
+        public static void main(String[] args) {
+            int[] numbers = {1, 2, 3, 4, 5};
+            int target = 3;
+    
+            // Calculate and print the sum of squares
+            System.out.println("Sum of squares: " + sumOfSquares(numbers));
+    
+            // Perform linear search and print the result
+            int resultIndex = linearSearch(numbers, target);
+            if (resultIndex != -1) {
+                System.out.println("Element found at index: " + resultIndex);
+            } else {
+                System.out.println("Element not found.");
+            }
+        }
+    }
+    
+}
